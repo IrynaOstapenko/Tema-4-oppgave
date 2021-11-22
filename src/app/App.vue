@@ -2,8 +2,8 @@
 	<Navigation />
 	<ToDoList />
 	<Slideshow />
-	<!-- <ContactForm />
-	<SortableTable />
+	<ContactForm />
+	<!-- <SortableTable />
 	<Quiz /> -->
 </template>
 
@@ -11,7 +11,7 @@
 	// import Navigation from '../components/Navigation.vue';
 	// import ToDoList from '../components/ToDoList.vue';
 	import Slideshow from '../components/Slideshow.vue';
-	// import ContactForm from '..components/ContactForm.vue';
+	import ContactForm from '../components/ContactForm.vue';
 	// import SortableTable from '..components/SortableTable.vue';	
 	// import Quiz from '..components/Quiz.vue';
 
@@ -20,7 +20,7 @@
 			// Navigation,
 			// ToDoList,
 			Slideshow,
-			// ContactForm,
+			ContactForm,
 			// SortableTable,
 			// Quiz
 		}
