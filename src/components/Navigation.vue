@@ -1,24 +1,24 @@
 <template>
 
-	<section class="main-navigation">
-		<div class="main-navigation__link"><RouterLink :to="{ name: 'home' }">Home</RouterLink></div>
-		<div class="main-navigation__link"><RouterLink :to="{ name: 'component', params: { component_id: 'todolist' } }"
+	<nav>
+		<RouterLink :to="{ name: 'home' }">Home</RouterLink>
+		<RouterLink :to="{ name: 'component', params: { component_id: 'todolist' } }"
 			>To-do list</RouterLink
-		></div>
-		<div class="main-navigation__link"><RouterLink :to="{ name: 'component', params: { component_id: 'slideshow' } }"
+		>
+		<RouterLink :to="{ name: 'component', params: { component_id: 'slideshow' } }"
 			>Slideshow</RouterLink
-		></div>
-		<div class="main-navigation__link"><RouterLink :to="{ name: 'component', params: { component_id: 'contactform' } }"
+		>
+		<RouterLink :to="{ name: 'component', params: { component_id: 'contactform' } }"
 			>Contact Form</RouterLink
-		></div>
-		<div class="main-navigation__link"><RouterLink :to="{ name: 'component', params: { component_id: 'sortabletable' } }"
+		>
+		<RouterLink :to="{ name: 'component', params: { component_id: 'sortabletable' } }"
 			>Sortable Table</RouterLink
-		></div>
-		<div class="main-navigation__link"><RouterLink :to="{ name: 'component', params: { component_id: 'quiz' } }"
+		>
+		<RouterLink :to="{ name: 'component', params: { component_id: 'quiz' } }"
 			>Quiz</RouterLink
-		></div>
+		>
 	
-	</section>
+	</nav>
 	
 </template>
 
@@ -28,7 +28,7 @@
 </script>
 
 <style>
-	.main-navigation {
+	nav {
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: flex-start;
@@ -36,7 +36,7 @@
 		margin-left: 1em;
 	}
 
-	.main-navigation__link {
+	a {
 		margin-right: 2em;
 	}
      
