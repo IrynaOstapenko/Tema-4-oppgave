@@ -1,5 +1,5 @@
 <template>
-	
+	<h3>Quiz</h3>
 </template>
 
 <script>
@@ -8,5 +8,7 @@
 </script>
 
 <style>
-    
+    h3 {
+		text-align: center;
+	}
 </style>

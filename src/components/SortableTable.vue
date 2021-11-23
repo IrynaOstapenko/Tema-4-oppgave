@@ -1,5 +1,5 @@
 <template>
-	
+	<h3>Sortable Table</h3>
 </template>
 
 <script>
@@ -8,5 +8,8 @@
 </script>
 
 <style>
+	h3 {
+		text-align: center;
+	}
     
 </style>

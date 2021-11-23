@@ -1,25 +1,26 @@
 <template>
 	<Navigation />
-	<ToDoList />
-	<Slideshow />
+	<RouterView />
+	<!-- <ToDoList />
+	<Slideshow /> -->
 	<!-- <ContactForm />
 	<SortableTable />
 	<Quiz /> -->
 </template>
 
 <script>
-	// import Navigation from '../components/Navigation.vue';
+	import Navigation from '../components/Navigation.vue';
 	// import ToDoList from '../components/ToDoList.vue';
-	import Slideshow from '../components/Slideshow.vue';
+	// import Slideshow from '../components/Slideshow.vue';
 	// import ContactForm from '..components/ContactForm.vue';
 	// import SortableTable from '..components/SortableTable.vue';	
 	// import Quiz from '..components/Quiz.vue';
 
 	export default {
 		components: {
-			// Navigation,
+			Navigation,
 			// ToDoList,
-			Slideshow,
+			// Slideshow,
 			// ContactForm,
 			// SortableTable,
 			// Quiz
