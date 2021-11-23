@@ -4,7 +4,10 @@
 		CONTACT FORM
 		</div>
 		<input class="cf-input" type="name" placeholder="Name" v-model="form.name" />
+
 		<input class="cf-input" type="email" placeholder="E-mail" v-model="form.email" />
+
+		<input class="cf-input" type="text" placeholder="Phonenumber" v-model="form.phonenumber">
 
 		<input class="cf-input" type="textarea" placeholder="..." v-model="form.message" />
 
