@@ -74,28 +74,26 @@
 
     .slideshow-header {
         position: relative;
-        margin: 2px auto 10px auto;
-        width: 500px;
-        height: 50px;
-        border-radius: 15px;
-        background-color: #E5E5E5; 
+        margin: 10px auto 5px auto;
+        width: 50vw;
+        height: 7vh;
+        border-radius: 50px;
+        background-color: #000000; 
     }
     .slideshow-header__text {
-        width: 40%;
-        margin-left: auto;
-        margin-right: auto;
+        text-align: center;
         padding-top: 10px;
         font-size: 2em;
         font-family: 'Great Vibes', cursive;
         font-weight: 500;
-        color: #E80808;
+        color: #ffffff;
     }
 	.slideshow-slide {
         position: relative;
         margin-left: auto;
         margin-right: auto;
-        width: 500px;
-        height: 540px;
+        width: 50vw;
+        height: 70vh;
         overflow: hidden;
     }
     .slideshow-slide img {
@@ -106,23 +104,27 @@
     button {
         position: absolute;
         height: 40px;
-        width: 50px;
-        top: calc(50% - 20px);
-        background-color: #E5E5E5;
+        width: 40px;
+        top: calc(95% - 20px);
+        background-color: #e5e5e585;
         border: none;
     }
     button:hover {
         cursor: pointer;
+        background: #fff;
     }
 
     button svg {
         width: 25px;
         height: 25px;
+        opacity: 80%;
     }
     .next {
-        right: 0;
+        right: 5;
+        border-radius: 50px;
     }
     .prev {
-        left: 0;
+        left: 5;
+        border-radius: 50px;
     }
 </style>
