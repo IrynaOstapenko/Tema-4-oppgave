@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- <template>
   <section class="quizContainer">
     <div class="quizContainer__Question">
@@ -14,6 +15,10 @@
   <audio controls autoplay hidden>
     <source src="./../../assets/music-kahoot.mp3" type="audio/mpeg" />
   </audio>
+=======
+<template>
+	<h3>Quiz</h3>
+>>>>>>> d11d17a860975dc7cf123e21d69a580086ef89f4
 </template>
 
 <script>
@@ -51,6 +56,7 @@ export default {
 
 
 <style>
+<<<<<<< HEAD
 body {
   background: rgb(41, 41, 41);
   font-family: Arial, Helvetica, sans-serif;
@@ -100,3 +106,9 @@ body {
   background: rgb(82, 189, 255);
 }
 </style> -->
+=======
+    h3 {
+		text-align: center;
+	}
+</style>
+>>>>>>> d11d17a860975dc7cf123e21d69a580086ef89f4
