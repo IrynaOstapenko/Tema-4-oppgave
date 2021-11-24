@@ -102,12 +102,9 @@
         height: 100%;
     }
     button {
-        position: absolute;
         height: 40px;
         width: 40px;
         top: calc(95% - 20px);
-        background-color: #e5e5e585;
-        border: none;
     }
     button:hover {
         cursor: pointer;
@@ -119,6 +116,13 @@
         height: 25px;
         opacity: 80%;
     }
+
+    .next, .prev {
+        position: absolute;
+        background-color: #e5e5e585;
+        border: none;
+    }
+
     .next {
         right: 5;
         border-radius: 50px;
