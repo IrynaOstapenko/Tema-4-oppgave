@@ -9,8 +9,7 @@
 		    :key="slide" 
 		    :index="index"
 		    :visibleSlide="visibleSlide"
-            v-show="visibleSlide === index"
-	>
+            v-show="visibleSlide === index">
 		    <img :src="slide" />
 
             <button @click="next" class="next">

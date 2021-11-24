@@ -1,7 +1,4 @@
 <template>
-	
-
-
 	<nav>
 		<div class="collapsible">
 		<button @click="toggleDetails" class="collapsible__summary">
@@ -77,7 +74,7 @@
 		flex-flow: column nowrap;
 		justify-content: center;
 		align-items: center;
-		margin-top: 25vh;
+		margin-top: 20vh;
 	}
 
 	a {
