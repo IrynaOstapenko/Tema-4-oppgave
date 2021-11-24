@@ -29,6 +29,9 @@
 </script>
 
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 	@import '../style/reset.css';
 	@import '../style/variables.css';
 	@import '../style/style.css';

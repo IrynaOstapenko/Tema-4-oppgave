@@ -69,7 +69,6 @@
 </script>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
     .slideshow-header {
         position: relative;

@@ -29,14 +29,13 @@
 
 		methods: {
 			submit_form() {
-				alert(`Thank you for contacting us, ${this.name}!`);
+				alert(`Thank you for contacting us, ${this.form.name}!`);
 			},
 		},
 	};
 </script>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 	.cf-title {
 		text-align: center;

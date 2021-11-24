@@ -1,19 +1,19 @@
 <template>
 	<nav>
 		<div class="collapsible">
-		<button @click="toggleDetails" class="collapsible__summary">
-			<div :class="`collapsible__arrow ${ !collapsed ? 'collapsible__arrow--rotated' : '' }`">
-				<svg viewBox="0 0 36 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M36 21L1.8571e-06 41.7846L3.67415e-06 0.21539L36 21Z" fill="black" />
-				</svg>
+			<button @click="toggleDetails" class="collapsible__summary">
+				<div :class="`collapsible__arrow ${ !collapsed ? 'collapsible__arrow--rotated' : '' }`">
+					<svg viewBox="0 0 36 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M36 21L1.8571e-06 41.7846L3.67415e-06 0.21539L36 21Z" fill="black" />
+					</svg>
+				</div>
+
+				<div class="collapsible__title">{{ title }}</div>
+			</button>
+
+			<div class="collapsible__details" v-if="!collapsed">
+				<slot />
 			</div>
-
-			<div class="collapsible__title">{{ title }}</div>
-		</button>
-
-		<div class="collapsible__details" v-if="!collapsed">
-			<slot />
-		</div>
 		</div>
 
 
@@ -21,8 +21,8 @@
 		<RouterLink :to="{ name: 'home' }">Home</RouterLink ></div>
 
 		<div class="collapsible">
-		<RouterLink :to="{ name: 'component', params: { component_id: 'todolist' } }"
-			>To-do List</RouterLink ></div>
+			<RouterLink :to="{ name: 'component', params: { component_id: 'todolist' } }">To-do List</RouterLink>
+		</div>
 
 		<div class="collapsible">
 		<RouterLink :to="{ name: 'component', params: { component_id: 'slideshow' } }"
@@ -67,7 +67,6 @@
 </script>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 	nav {
 		display: flex;
@@ -122,7 +121,7 @@
 	.collapsible__arrow {
 		width: 0.7em;
 		height: 1px;
-		padding-left: 10px;
+		padding-left: 15px;
 		margin-right: 0.5em;
 	}
 
