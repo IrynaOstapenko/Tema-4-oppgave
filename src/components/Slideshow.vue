@@ -108,7 +108,6 @@
     }
     button:hover {
         cursor: pointer;
-        background: #fff;
     }
 
     button svg {
@@ -121,6 +120,10 @@
         position: absolute;
         background-color: #e5e5e585;
         border: none;
+    }
+
+    .next:hover, .prev:hover {
+        background: #fff;
     }
 
     .next {

@@ -51,7 +51,7 @@
 		props: {
 			title: {
 				type: String,
-				default: 'Details'
+				default: 'Test'
 			}
 		},
 		
@@ -102,33 +102,35 @@
 
 	.collapsible__title {
 		color: #fff;
+		font-family: 'Quicksand', sans-serif;
+		font-size: 1.5em;
 	}
 
 	.collapsible__summary {
 		width: 100%;
-		background: rgb(88, 88, 88);
+		background: rgb(29, 29, 29);
 		border-radius: 50px;
 		border: none;
 	}
 
 	.collapsible__summary,
 	.collapsible__details {
-		padding: 0.5em;
+		padding: 0em;
 	}
 	
-	.collapsible__details {
-		padding-left: 1.7em;	
+	.collapsible__details {	
 		padding-top: 0;
 	}
 
 	.collapsible__arrow {
 		width: 0.7em;
-		height: 0.85em;
+		height: 1px;
+		padding-left: 10px;
 		margin-right: 0.5em;
 	}
 
 	.collapsible__arrow--rotated {
-		transform: rotate(90deg)
+		transform: rotate(90deg);
 	}
      
 </style>
