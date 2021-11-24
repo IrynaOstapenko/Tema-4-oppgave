@@ -1,7 +1,7 @@
 <template>
-	<Navigation v-if="$route.params.component_id === 'navigation'">
-        akjsdhakjshd
-    </Navigation>
+    <Collapsible>
+	    <Navigation v-if="$route.params.component_id === 'navigation'" />
+    </Collapsible>
     <ToDoList v-if="$route.params.component_id === 'todolist'" />
     <Slideshow v-if="$route.params.component_id === 'slideshow'" />
     <ContactForm v-if="$route.params.component_id === 'contactform'" />
