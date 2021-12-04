@@ -15,10 +15,12 @@
                             v-model="userAnswer"
                             >
         <!-- We use v-model to connect user's choice with vue. In radio buttons v-model links to value. -->
-                        <label v-bind:for="answer.text">{{ answer.text }}</label>
+                    <label v-bind:for="answer.text">{{ answer.text }}</label>
                 </li>
             </ul>
+
             <button class="quiz-container__question__btn btn-prev" v-if="questionsIndex > 0" @click="prev">prev</button>
+
             <button class="quiz-container__question__btn btn-next" @click="next">next</button>
         </div>
 
@@ -26,6 +28,7 @@
             <h2 class="quiz-container__result__heading">Quiz finished!</h2>
             <p>Total score: {{ score() }} / {{ questions.length }}</p>
         </div>
+
     </div>  
 </template>
 
@@ -102,7 +105,6 @@ export default {
         score() {
             // Array method that allows to select only true values in the array
             return this.totalAnswers.filter(Boolean).length;
-
         }
     }
 }
@@ -119,23 +121,29 @@ export default {
         padding-top: 1px;
         display: flex;
         flex-flow: column nowrap;
+        font-family: 'Quicksand', sans-serif;
     }
+
     .quiz-container__heading {
         text-align: center;
         margin: 0.3em;
     }
+
     .quiz-container__question {
        position: absolute;
        top: 25%;
        left: 30%;
     }
+
     .quiz-container__question__heading {
         margin-bottom: 0.3em;
     }
+
     .quiz-container__question__answers {
         list-style-type: none;
         margin-bottom: 0.3em;
     }
+
     .quiz-container__question__btn {
         margin-bottom: 0.3em;
         background-color: white;
@@ -145,6 +153,7 @@ export default {
         border-radius: 3px;
         margin-right: 0.2em;
     }
+    
     .quiz-container__result__heading {
         margin-top: 0.3em;
         text-align: center;
