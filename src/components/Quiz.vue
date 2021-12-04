@@ -113,15 +113,16 @@ export default {
 <style>
     .quiz-container {
         position: relative;
-        width: 600px;
+        width: 50vw;
         height: 180px;
-        margin: 1em auto 1em auto;
+        margin: auto;
         border: 1px solid black;
         border-radius: 5px;
         padding-top: 1px;
         display: flex;
         flex-flow: column nowrap;
         font-family: 'Quicksand', sans-serif;
+        margin-bottom: 5vh;
     }
 
     .quiz-container__heading {

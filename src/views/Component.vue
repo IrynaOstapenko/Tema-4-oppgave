@@ -2,11 +2,21 @@
     <Collapsible>
 	    <Navigation v-if="$route.params.component_id === 'navigation'" />
     </Collapsible>
+    <Collapsible>
     <ToDoList v-if="$route.params.component_id === 'todolist'" />
+    </Collapsible>
+    <Collapsible>
     <Slideshow v-if="$route.params.component_id === 'slideshow'" />
+    </Collapsible>
+    <Collapsible>
     <ContactForm v-if="$route.params.component_id === 'contactform'" />
+    </Collapsible>
+    <Collapsible>
     <SortableTable v-if="$route.params.component_id === 'sortabletable'" />
+    </Collapsible>>
+    <Collapsible>
     <Quiz v-if="$route.params.component_id === 'quiz'" />
+    </Collapsible>
 </template>
 
 <script>
