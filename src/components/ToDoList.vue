@@ -24,7 +24,7 @@
 
     </div>
 </template>
-
+ 
 <script>
     import DoneIcon from './DoneIcon.vue'
     import DeleteIcon from './DeleteIcon.vue'
@@ -76,8 +76,8 @@
 
 	.todo-container {
         position: relative;
-        width: 600px;
-        margin: 1em auto auto auto;
+        width: 50vw;
+        margin: auto;
         background-color: #D2D1D1;
         border-radius: 5px;
         padding-top: 1px;

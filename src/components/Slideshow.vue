@@ -71,7 +71,7 @@
         margin-left: auto;
         margin-right: auto;
         width: 50vw;
-        height: 70vh;
+        height: 40em;
         overflow: hidden;
     }
     .slideshow-slide img {
@@ -82,7 +82,7 @@
     button {
         height: 40px;
         width: 40px;
-        top: calc(95% - 20px);
+        top: calc(96% - 20px);
     }
     button:hover {
         cursor: pointer;
