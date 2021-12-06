@@ -8,12 +8,15 @@
 
 <script>
     export default {
-		data() {
-			
+		props: {
+			title: {
+				type: String,
+				default: 'Test'
+			}
 		},
-	};
+	}
 </script>
 
 <style>
-    
+   
 </style>
