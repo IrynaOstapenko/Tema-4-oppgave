@@ -2,29 +2,22 @@
 	<nav>
 		<div class="collapsible">
 			<button @click="toggleDetails" class="collapsible__summary">
-				<div :class="`collapsible__arrow ${ !collapsed ? 'collapsible__arrow--rotated' : '' }`">
-					<svg viewBox="0 0 36 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M36 21L1.8571e-06 41.7846L3.67415e-06 0.21539L36 21Z" fill="black" />
-					</svg>
-				</div>
-
 				<div class="collapsible__title">{{ title }}</div>
-			</button>
-
-			<div class="collapsible__details" v-if="!collapsed">
-				<slot />
-			</div>
+			</button>	
+		</div>
+		
+		<div class="collapsible__component" v-if="!collapsed">
+			test <!-- <RouterLink :to="{ name: 'component', params: { component_id: 'contactform' } }" /> -->
 		</div>
 
 
-		<div class="collapsible">
-		<RouterLink :to="{ name: 'home' }">Home</RouterLink ></div>
 
-		<div class="collapsible">
+
+		<div class="collapsible" @click="toggleDetails">
 			<RouterLink :to="{ name: 'component', params: { component_id: 'todolist' } }">To-do List</RouterLink>
 		</div>
 
-		<div class="collapsible">
+		<div class="collapsible" @click="toggleDetails">
 		<RouterLink :to="{ name: 'component', params: { component_id: 'slideshow' } }"
 			>Slideshow</RouterLink ></div>
 
@@ -44,22 +37,28 @@
 </template>
 
 <script>
+    import ToDoList from './ToDoList.vue';
+    import Slideshow from './Slideshow.vue';
+    import ContactForm from './ContactForm.vue';
+    import SortableTable from './SortableTable.vue';
+    import Quiz from './Quiz.vue'; 
+
 	export default {
 		props: {
 			title: {
 				type: String,
-				default: 'Test'
+				default: 'ComponentName'
 			}
 		},
 		
-		data() {
+		data: function() {
 			return {
 				collapsed: true
 			};
 		},
 
 		methods: {
-			toggleDetails() {
+			toggleDetails: function() {
 				this.collapsed = !this.collapsed
 			}
 		}
@@ -104,18 +103,20 @@
 
 	.collapsible__summary {
 		width: 100%;
-		background: rgb(29, 29, 29);
+		background: rgb(0, 0, 0);
 		border-radius: 50px;
 		border: none;
 	}
 
 	.collapsible__summary,
-	.collapsible__details {
+	.collapsible__component {
 		padding: 0em;
 	}
 	
-	.collapsible__details {	
+	.collapsible__component {
 		padding-top: 0;
+		background: rgb(202, 133, 133);
+		width: 50vw;
 	}
 
 	.collapsible__arrow {

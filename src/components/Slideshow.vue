@@ -1,9 +1,6 @@
 /* Used tutorial as inspiration https://www.youtube.com/watch?v=6-JEiEfkluc */
 
 <template>
-    <div class="slideshow-header">
-        <div class="slideshow-header__text">Merry Christmas!</div>
-    </div>
     <div class="slideshow">
         <div class="slideshow-slide" v-for="(slide, index) in slides" 
 		    :key="slide" 
@@ -69,23 +66,6 @@
 </script>
 
 <style>
-
-    .slideshow-header {
-        position: relative;
-        margin: 10px auto 5px auto;
-        width: 50vw;
-        height: 7vh;
-        border-radius: 50px;
-        background-color: #000000; 
-    }
-    .slideshow-header__text {
-        text-align: center;
-        padding-top: 10px;
-        font-size: 2em;
-        font-family: 'Great Vibes', cursive;
-        font-weight: 500;
-        color: #ffffff;
-    }
 	.slideshow-slide {
         position: relative;
         margin-left: auto;

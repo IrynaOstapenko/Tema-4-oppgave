@@ -1,5 +1,5 @@
 <template>
-	<Navigation />
+	<!-- <Navigation /> -->
 	<RouterView />
 	<!-- <ToDoList />
 	<Slideshow /> -->

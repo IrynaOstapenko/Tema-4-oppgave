@@ -1,17 +1,14 @@
 <template>
 	<div class="contact-form">
-		<div class="cf-title" alt="Contact Form Title">
-		CONTACT FORM
-		</div>
-		<input class="cf-input" type="name" placeholder="Name" v-model="form.name" />
+		<input class="contact-form__input" type="name" placeholder="Name" v-model="form.name" />
 
-		<input class="cf-input" type="email" placeholder="E-mail" v-model="form.email" />
+		<input class="contact-form__input" type="email" placeholder="E-mail" v-model="form.email" />
 
-		<input class="cf-input" type="text" placeholder="Phonenumber" v-model="form.phonenumber">
+		<input class="contact-form__input" type="text" placeholder="Phonenumber" v-model="form.phonenumber">
 
-		<input class="cf-input" type="textarea" placeholder="..." v-model="form.message" />
+		<input class="contact-form__input" type="textarea" placeholder="..." v-model="form.message" />
 
-		<div class="cf-button" @click="submit_form">SUBMIT</div>
+		<div class="contact-form__button" @click="submit_form">SUBMIT</div>
 	</div>
 </template>
 
@@ -36,18 +33,6 @@
 </script>
 
 <style>
-
-	.cf-title {
-		text-align: center;
-		margin-bottom: 5px;
-		padding: 10px;
-		width: 50vw;
-        font-size: 1.5em;
-        font-family: 'Quicksand', sans-serif;
-		background: #000;
-		border-radius: 50px;
-        color: #fff;
-	}
     .contact-form {
 		display: flex;
 		align-items: center;
@@ -55,29 +40,31 @@
 		margin: 5px;
 	}
 
-	.cf-input + .cf-input {
+	.contact-form__input + .contact-form__input {
 		margin-top: 0.5em;
 	}
 
-	.cf-input {
+	.contact-form__input {
 		border: 1px solid black;
 		padding: 1em;
 		width: 50vw;
 	}
 
-	.cf-button {
+	.contact-form__button {
+		display: flex;
+		justify-content: center;
 		background: black;
 		color: white;
 		text-align: center;
-		width: 10vw;
 		margin: 5px auto 10px auto;
 		padding: 1em;
 		border-radius: 50px;
 		font-family: 'Quicksand', sans-serif;
+		font-size: 1em;
 		transition-duration: 0.8s;
 	}
 
-	.cf-button:hover {
+	.contact-form__button:hover {
 		letter-spacing: 3px;
 	}
 </style>
