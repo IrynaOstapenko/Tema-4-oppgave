@@ -13,7 +13,7 @@
     import CollapsibleTitle from './CollapsibleTitle.vue';
 
     export default {
-        props: {
+       /*  props: {
 			title: {
 				type: String,
 				default: 'To-Do List',
@@ -25,7 +25,7 @@
                 id: 2
 			}
 		},
-
+ */
 		data() {
 			return {
 				collapsed: true

@@ -41,6 +41,18 @@
 			Collapsible,
 			CollapsibleTitle
 		},
+
+        data() {
+            return {
+                componentTitles: [
+                    { ToDoList:'To-Do List' },
+                    { Slideshow: 'Merry Xmas' },
+                    { ContactForm: 'Contact Us' },
+                    { SortableTable: 'Table' },
+                    { Quiz: 'Quiz' }
+                ]
+            }
+        }
 	};
 </script>
 
