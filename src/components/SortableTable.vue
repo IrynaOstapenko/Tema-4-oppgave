@@ -68,7 +68,7 @@
 		font-size: 0.8em;
 	}
 
-	tr:nth-child(even) {background-color: #f1eaea;}
+	tr:nth-child(even) {background-color: rgb(238, 232, 229);}
 
 	table td {
 		padding: 0.4em;

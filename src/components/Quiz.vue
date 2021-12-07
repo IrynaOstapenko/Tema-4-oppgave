@@ -2,7 +2,7 @@
     <div class="quiz-container">
 
         <!-- We show the heading only on top of the first question -->
-        <h2 class="quiz-container__heading" v-show="questionsIndex === 0">Try this Quiz!</h2>
+        <h2 class="quiz-container__heading" v-show="questionsIndex === 0">TRY OUR QUIZ</h2>
     
         <div class="quiz-container__question" v-for="(question, index) in questions" v-show="index === questionsIndex">            
             <h4 class="quiz-container__question__heading">{{ question.text }}</h4>
@@ -26,7 +26,7 @@
 
         <div class="quiz-container__result" v-show="questionsIndex === questions.length">
             <h2 class="quiz-container__result__heading">Quiz finished!</h2>
-            <p>Total score: {{ score() }} / {{ questions.length }}</p>
+            <p>You scored {{ score() }} / {{ questions.length }}</p>
         </div>
 
     </div>  
@@ -114,10 +114,10 @@ export default {
     .quiz-container {
         position: relative;
         width: 50vw;
-        height: 180px;
+        height: 300px;
         margin: auto;
         border: 1px solid black;
-        border-radius: 5px;
+        border-radius: 25px;
         padding-top: 1px;
         display: flex;
         flex-flow: column nowrap;
@@ -127,7 +127,10 @@ export default {
 
     .quiz-container__heading {
         text-align: center;
-        margin: 0.3em;
+        margin: 0.8em;
+        color: #db6541;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
     }
 
     .quiz-container__question {
@@ -142,7 +145,22 @@ export default {
 
     .quiz-container__question__answers {
         list-style-type: none;
+        font-size: 0.8em;
         margin-bottom: 0.3em;
+        padding: 5px;
+        width: 17vw;
+    }
+
+    .quiz-container__question__answers li {
+        background: rgb(238, 229, 224);
+        border: 0.3em outset rgb(214, 198, 188);
+        margin: 0.3em;
+        padding: 6px;
+    }
+
+    .quiz-container__question__answers li:hover {
+        background: rgb(228, 213, 204);
+        border: 0.3em outset rgb(230, 216, 207);
     }
 
     .quiz-container__question__btn {
@@ -151,13 +169,21 @@ export default {
         height: 25px;
         width: 55px;
         border: 1px solid black;
-        border-radius: 3px;
+        border-radius: 25px;
         margin-right: 0.2em;
     }
     
     .quiz-container__result__heading {
-        margin-top: 0.3em;
         text-align: center;
+        margin: 0.8em;
+        color: #db6541;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
     } 
+
+    .quiz-container__result p {
+        text-align: center;
+        padding: 60px;
+    }
 
 </style>
