@@ -102,6 +102,7 @@
 	}
 
 	.sortable__tr:nth-child(even) {background-color: #f1eaea;}
+	tr:nth-child(even) {background-color: rgb(238, 232, 229);}
 
 	.sortable__tr__td {
 		padding: 0.4em;

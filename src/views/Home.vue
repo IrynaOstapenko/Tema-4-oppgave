@@ -52,6 +52,14 @@
                 //     { Quiz: 'Quiz' }
                 // ],
             }
+        },
+
+        props:
+            [ 'componentTitles' ]
+        ,
+
+        methods: {
+
         }
 	};
 </script>
