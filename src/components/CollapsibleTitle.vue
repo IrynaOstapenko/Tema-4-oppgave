@@ -1,22 +1,21 @@
 <template>
-    <div class="collapsible">
-        <button @click="toggleDetails" class="collapsible__summary">
-				<div class="collapsible__title">{{ title }}</div>
-			</button>	 
-    </div>
+    
+	<div class="collapsible-title">{{ title }}</div>
+
 </template>
 
 <script>
     export default {
 		props: {
-			title: {
-				type: String,
-				default: 'Test'
-			}
-		},
+			title: {type: String}
+		}
 	}
 </script>
 
 <style>
-   
+   .collapsible-title {
+		color: #fff;
+		font-family: 'Quicksand', sans-serif;
+		font-size: 1.5em;
+	}
 </style>

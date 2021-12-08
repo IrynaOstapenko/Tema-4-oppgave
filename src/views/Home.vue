@@ -1,27 +1,27 @@
 <template>
-    <Collapsible>
+    <Collapsible :title="'Todo List'">
         <ToDoList />
     </Collapsible>
 
-    <Collapsible>
+    <Collapsible :title="'Slideshow'">
         <Slideshow />
     </Collapsible>
 
-    <Collapsible>
+    <Collapsible :title="'Contact Form'">
         <ContactForm />
     </Collapsible>
 
-    <Collapsible>
+    <Collapsible :title="'Sortable Table'">
         <SortableTable />
     </Collapsible>
 
-    <Collapsible>
+    <Collapsible :title="'Quiz'">
         <Quiz />
     </Collapsible>
 </template>
 
 <script>
-    import Navigation from '../components/Navigation.vue';
+    // import Navigation from '../components/Navigation.vue';
     import ToDoList from '../components/ToDoList.vue';
     import Slideshow from '../components/Slideshow.vue';
     import ContactForm from '../components/ContactForm.vue';
@@ -32,7 +32,7 @@
 
 	export default {
 		components: {
-            Navigation,
+            // Navigation,
             ToDoList,
             Slideshow,
             ContactForm,
@@ -44,13 +44,13 @@
 
         data() {
             return {
-                componentTitles: [
-                    { ToDoList:'To-Do List' },
-                    { Slideshow: 'Merry Xmas' },
-                    { ContactForm: 'Contact Us' },
-                    { SortableTable: 'Table' },
-                    { Quiz: 'Quiz' }
-                ]
+                // componentTitles: [
+                //     { ToDoList:'To-Do List' },
+                //     { Slideshow: 'Merry Xmas' },
+                //     { ContactForm: 'Contact Us' },
+                //     { SortableTable: 'Table' },
+                //     { Quiz: 'Quiz' }
+                // ],
             }
         }
 	};

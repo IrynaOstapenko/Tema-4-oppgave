@@ -1,16 +1,16 @@
 <template>
-	<table>
-		<thead>
-			<tr>
-				<td>Name</td>
-				<td>Email</td>
-				<td>Department</td>
+	<table class="sortable">
+		<thead class="sortable__thead">
+			<tr class="sortable__tr">
+				<td><button class="sortable__button" @click="sortBy('name')">Name</button></td>
+				<td><button class="sortable__button" @click="sortBy('email')">Email</button></td>
+				<td><button class="sortable__button" @click="sortBy('department')">Department</button></td>
 			</tr>
 		</thead>
 
 		<tbody>
-			<tr v-for="row in contentSortedByName">
-				<td v-for="value in row">{{ value }}</td>
+			<tr class="sortable__tr" v-for="row in alphabeticalSort">
+				<td class="sortable__tr__td" v-for="value in row">{{ value }}</td>
 			</tr>
 		</tbody>
 	</table>
@@ -28,28 +28,55 @@
 	export default {
 		data() {
 			return {
+				sort: {
+					key: 'name',
+					order: 'asc',
+				},
 				content: JSON.parse(mockData)
 			}
 		},
 
+		created() {
+			const query = this.$route.query;
+
+			if (query.sort) {
+				this.sort.key = query.sort;
+			}
+
+			if (query.order) {
+				this.sort.order = query.order;
+			}
+		},
+
 		computed: {
-			contentSortedByName() {
-				return this.content.sort((a, b) => {
-					if (a.name > b.name) {
+			alphabeticalSort() {
+				const key = this.sort.key;
+				const orderValue = this.sort.order === 'asc' ? 1 : -1;
+
+				function compareFunction(a, b) {			
+					if (a[key] > b[key]) {
 						return 1;
-					} else if (a.name < b.name) {
+					} else if (a[key] < b[key]) {
 						return -1;
 					} else {
-						return 0;
+						return 0
 					}
-				})
+				}
+
+				return this.content.sort((a, b) => compareFunction(a, b) * orderValue);
+			},
+		},
+		methods: {
+			sortBy(key) {
+				this.sort.key = key;
+				this.$router.push({ query: { ...this.$route.query, sort: this.sort.key } })
 			}
-		}
+		},
 	}
 </script>
 
 <style>
-	table {
+	.sortable {
 		width: 50vw;
 		border: solid black 1px;
 		margin: auto;
@@ -57,20 +84,26 @@
 		border-radius: 25px;
 	}
 
-	table thead {
+	.sortable__thead {
 		font-weight: 400;
 		font-family: 'Quicksand', sans-serif;
 		font-size: 1.5em;
 	}
 
-	table tr {
+	.sortable__tr {
 		font-family: 'Quicksand', sans-serif;
 		font-size: 0.8em;
 	}
 
-	tr:nth-child(even) {background-color: #f1eaea;}
+	.sortable__button {
+		width: 98%;
+		height: 30px;
+		margin: auto;
+	}
 
-	table td {
+	.sortable__tr:nth-child(even) {background-color: #f1eaea;}
+
+	.sortable__tr__td {
 		padding: 0.4em;
 	}
 

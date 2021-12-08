@@ -1,6 +1,5 @@
 <template>    
     <div class="quiz-container">
-
         <!-- We show the heading only on top of the first question -->
         <h2 class="quiz-container__heading" v-show="questionsIndex === 0">Try this Quiz!</h2>
     
@@ -8,12 +7,7 @@
             <h4 class="quiz-container__question__heading">{{ question.text }}</h4>
             <ul class="quiz-container__question__answers">
                 <li v-for="answer in question.answers">
-                    <input  type="radio" 
-                            v-bind:id="answer.text" 
-                            v-bind:name="index"
-                            v-bind:value="answer.correct"
-                            v-model="userAnswer"
-                            >
+                    <input  type="radio" :id="answer.text" :name="index" :value="answer.correct" v-model="userAnswer">
         <!-- We use v-model to connect user's choice with vue. In radio buttons v-model links to value. -->
                     <label v-bind:for="answer.text">{{ answer.text }}</label>
                 </li>

@@ -1,41 +1,33 @@
 <template>
-
-    <div class="collapsible">
-        <button @click="toggleDetails" class="collapsible__summary">
-				<div class="collapsible__title">{{ title }}</div>
-		</button>	 
-    </div>
-    <slot v-if="!collapsed" />
-
+    <div class="collapsible">		
+		<button @click="toggleDetails" class="collapsible__summary">{{ title }}</button>	 
+	</div>        
+     <slot v-if="!collapsed" />
 </template>
 
 <script>
     import CollapsibleTitle from './CollapsibleTitle.vue';
 
     export default {
-       /*  props: {
-			title: {
-				type: String,
-				default: 'To-Do List',
-                id: 1
-			},
-            title: {
-				type: String,
-				default: 'Slideshow',
-                id: 2
-			}
+		props: {
+			title: { type: String, default: 'No title' }
 		},
- */
+
+		components: {
+			CollapsibleTitle
+		},
+       
 		data() {
 			return {
-				collapsed: true
-			};
+				collapsed: true,
+			}
 		},
 
 		methods: {
 			toggleDetails() {
 				this.collapsed = !this.collapsed
-			}
+			},
+			
 		}
 	};
 </script>
@@ -54,17 +46,14 @@
 		padding: 15px;
 	}
 
-	.collapsible__title {
-		color: #fff;
-		font-family: 'Quicksand', sans-serif;
-		font-size: 1.5em;
-	}
-
 	.collapsible__summary {
 		width: 100%;
 		background: rgb(0, 0, 0);
 		border-radius: 50px;
 		border: none;
+		color: #fff;
+		font-family: 'Quicksand', sans-serif;
+		font-size: 1.2em;
 	}
 
 	.collapsible__summary,
