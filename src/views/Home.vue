@@ -7,7 +7,7 @@
         <Slideshow />
     </Collapsible>
 
-    <Collapsible :title="'Contact Form'">
+    <Collapsible :title="'Contact Us'">
         <ContactForm />
     </Collapsible>
 
@@ -42,25 +42,9 @@
 			CollapsibleTitle
 		},
 
-        data() {
-            return {
-                // componentTitles: [
-                //     { ToDoList:'To-Do List' },
-                //     { Slideshow: 'Merry Xmas' },
-                //     { ContactForm: 'Contact Us' },
-                //     { SortableTable: 'Table' },
-                //     { Quiz: 'Quiz' }
-                // ],
-            }
-        },
-
         props:
             [ 'componentTitles' ]
         ,
-
-        methods: {
-
-        }
 	};
 </script>
 

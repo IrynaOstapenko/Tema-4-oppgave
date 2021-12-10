@@ -1,31 +1,16 @@
-<!-- <template>
-    <Collapsible>
-	    <Navigation v-if="$route.params.component_id === 'navigation'" />
-    </Collapsible>
-
-    <Collapsible>
-        <ToDoList v-if="$route.params.component_id === 'todolist'" />
-    </Collapsible>
-
-    <Collapsible>
-        <Slideshow v-if="$route.params.component_id === 'slideshow'" />
-    </Collapsible>
-
-    <Collapsible>
-        <ContactForm v-if="$route.params.component_id === 'contactform'" />
-    </Collapsible>
-
-    <Collapsible>
-        <SortableTable v-if="$route.params.component_id === 'sortabletable'" />
-    </Collapsible>
-
-    <Collapsible>
-        <Quiz v-if="$route.params.component_id === 'quiz'" />
-    </Collapsible>
+<template>
+    <!-- routes to each component or home for navbar -->
+    <Home v-if="$route.params.component_id == 'home'" />
+    <ToDoList v-if="$route.params.component_id == 'todolist'" />
+    <Slideshow v-if="$route.params.component_id == 'slideshow'" />
+    <ContactForm v-if="$route.params.component_id == 'contactform'" />
+    <SortableTable v-if="$route.params.component_id == 'sortabletable'" />
+    <Quiz v-if="$route.params.component_id == 'quiz'" />
 </template>
 
 <script>
     import Navigation from '../components/Navigation.vue';
+    import Home from './Home.vue'
     import ToDoList from '../components/ToDoList.vue';
     import Slideshow from '../components/Slideshow.vue';
     import ContactForm from '../components/ContactForm.vue';
@@ -35,27 +20,16 @@
 	export default {
 		components: {
             Navigation,
+            Home,
             ToDoList,
             Slideshow,
             ContactForm,
             SortableTable,
             Quiz
 		},
-
-        data() {
-			return {
-				collapsed: true
-			};
-		},
-
-		methods: {
-			toggleDetails() {
-				this.collapsed = !this.collapsed
-			}
-		}
 	};
 </script>
 
 <style>
 
-</style> -->
+</style> 

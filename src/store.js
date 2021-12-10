@@ -1,16 +1,13 @@
 import navigation from './modules/navigation.js'
+import footer from './modules/footer.js';
 
 export default {
     state() {
         return {
-            navigation: {
+            footer: {
                 visible: false,
                 pages: [
-                    { title: 'To-Do List',      id: 'to-do-list' },
-                    { title: 'Slideshow',       id: 'slideshow' },
-                    { title: 'Concact Us',      id: 'contact-form' },
-                    { title: 'Sortable Table',  id: 'sortable-table' },
-                    { title: 'Quiz',            id: 'quiz' }
+                    { title: 'Contact Us',      id: 'contact-form' },
                 ],
             }
         };
@@ -18,17 +15,18 @@ export default {
     
     getters: { 
         getPages(state) {
-            return state.navigation.pages; 
+            return state.footer.pages; 
         },
     },
 
     mutations: {
         addPage(state, page) {
-            state.navigation.pages.push(page); 
+            state.footer.pages.push(page); 
         },
     },
 
     modules: { 
         navigation,
+        footer
     },
 };

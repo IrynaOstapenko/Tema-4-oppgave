@@ -1,4 +1,6 @@
 <template>
+	<RouterLink v-for="page in pagesFromStore" :to="{ name: 'page', params: { page_id: page.id } }">{{ page.title }}</RouterLink>
+
 	<div class="contact-form">
 		<input class="contact-form__input" type="name" placeholder="Name" v-model="form.name" />
 

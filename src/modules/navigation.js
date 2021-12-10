@@ -1,3 +1,4 @@
+
 export default {
     state() {
         return {
@@ -8,7 +9,7 @@ export default {
                     { id: '002', name: 'Slideshow' },
                     { id: '003', name: 'Contact Us' },
                     { id: '004', name: 'Sortable Table' },
-                    { id: '005', name: 'Quiz' }
+                    { id: '005', name: 'Quizzzzz' }
                 ],
             },
         }
