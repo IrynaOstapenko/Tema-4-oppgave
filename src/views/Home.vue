@@ -21,7 +21,7 @@
 </template>
 
 <script>
-    // import Navigation from '../components/Navigation.vue';
+    import Navigation from '../components/Navigation.vue';
     import ToDoList from '../components/ToDoList.vue';
     import Slideshow from '../components/Slideshow.vue';
     import ContactForm from '../components/ContactForm.vue';
@@ -32,7 +32,7 @@
 
 	export default {
 		components: {
-            // Navigation,
+            Navigation,
             ToDoList,
             Slideshow,
             ContactForm,

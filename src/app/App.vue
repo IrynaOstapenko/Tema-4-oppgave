@@ -1,9 +1,9 @@
 <template>
-	<!-- <Navigation /> -->
+	<Navigation />
 	<RouterView />
 	<!-- <ToDoList />
-	<Slideshow /> -->
-	<!-- <ContactForm />
+	<Slideshow />
+	<ContactForm />
 	<SortableTable />
 	<Quiz /> -->
 </template>

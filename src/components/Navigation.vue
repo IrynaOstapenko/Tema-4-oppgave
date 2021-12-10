@@ -1,26 +1,10 @@
-<!-- <template>
+<template>
 	<nav>
-
-		<div class="collapsible">
-			<RouterLink :to="{ name: 'component', params: { component_id: 'todolist' } }">To-do List</RouterLink>
-		</div>
-
-		<div class="collapsible">
-			<RouterLink :to="{ name: 'component', params: { component_id: 'slideshow' } }">Slideshow</RouterLink >
-		</div>
-
-		<div class="collapsible">	
-			<RouterLink :to="{ name: 'component', params: { component_id: 'contactform' } }">Contact Form</RouterLink >
-		</div>
-
-		<div class="collapsible">	
-			<RouterLink :to="{ name: 'component', params: { component_id: 'sortabletable' } }">Sortable Table</RouterLink >
-		</div>
-
-		<div class="collapsible">	
-			<RouterLink :to="{ name: 'component', params: { component_id: 'quiz' } }">Quiz-app</RouterLink >
-		</div>
-	
+		<RouterLink :to="{ name: 'component', params: { component_id: 'todolist' } }">To-do List</RouterLink>
+		<RouterLink :to="{ name: 'component', params: { component_id: 'slideshow' } }">Slideshow</RouterLink >
+		<RouterLink :to="{ name: 'component', params: { component_id: 'contactform' } }">Contact Form</RouterLink >
+		<RouterLink :to="{ name: 'component', params: { component_id: 'sortabletable' } }">Sortable Table</RouterLink >
+		<RouterLink :to="{ name: 'component', params: { component_id: 'quiz' } }">Quiz-app</RouterLink >
 	</nav>
 </template>
 
@@ -33,27 +17,17 @@
 	import Collapsible from './Collapsible.vue'; 
 
 	export default {
-		data: function() {
-			return {
-				collapsed: true
-			};
+		computed: {
+			components() {
+				return this.$store.getters.getComponents;
+			},
 		},
-
-		methods: {
-			toggleDetails: function() {
-				this.collapsed = !this.collapsed
-			}
-		}
 	};
 </script>
 
 <style> 
-	/*
 	nav {
 		display: flex;
-		flex-flow: column nowrap;
-		justify-content: center;
-		align-items: center;
+		flex-flow: row nowrap;
 	}
-	*/
-</style> -->
+</style> 
