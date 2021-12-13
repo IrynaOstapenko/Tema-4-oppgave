@@ -9,7 +9,7 @@
                 <li v-for="answer in question.answers">
                     <input  type="radio" :id="answer.text" :name="index" :value="answer.correct" v-model="userAnswer">
         <!-- We use v-model to connect user's choice with vue. In radio buttons v-model links to value. -->
-                    <label v-bind:for="answer.text">{{ answer.text }}</label>
+                    <label v-bind:for="answer.text">{{ answer.text }}</label>
                 </li>
             </ul>
 
@@ -118,7 +118,6 @@ export default {
         font-family: 'Quicksand', sans-serif;
         margin-bottom: 5vh;
     }
-
     .quiz-container__heading {
         text-align: center;
         margin: 0.8em;
@@ -126,17 +125,14 @@ export default {
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
     }
-
     .quiz-container__question {
        position: absolute;
        top: 25%;
        left: 30%;
     }
-
     .quiz-container__question__heading {
         margin-bottom: 0.3em;
     }
-
     .quiz-container__question__answers {
         list-style-type: none;
         font-size: 0.8em;
@@ -144,19 +140,19 @@ export default {
         padding: 5px;
         width: 17vw;
     }
-
     .quiz-container__question__answers li {
         background: rgb(238, 229, 224);
         border: 0.3em outset rgb(214, 198, 188);
         margin: 0.3em;
         padding: 6px;
     }
-
+    label {
+        margin-left: 0.2em;
+    }
     .quiz-container__question__answers li:hover {
         background: rgb(228, 213, 204);
         border: 0.3em outset rgb(230, 216, 207);
     }
-
     .quiz-container__question__btn {
         margin-bottom: 0.3em;
         background-color: white;
@@ -174,10 +170,8 @@ export default {
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
     } 
-
     .quiz-container__result p {
         text-align: center;
         padding: 60px;
     }
-
 </style>
