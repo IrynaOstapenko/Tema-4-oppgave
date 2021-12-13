@@ -1,7 +1,5 @@
 <template>
-    
 	<div class="collapsible-title">{{ title }}</div>
-
 </template>
 
 <script>

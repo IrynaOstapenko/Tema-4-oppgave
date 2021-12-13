@@ -1,9 +1,7 @@
-
 export default {
     state() {
         return {
             navigation: {
-                navbar: [],
                 components: [
                     { id: '001', name: 'To-Do List' },
                     { id: '002', name: 'Slideshow' },
@@ -13,6 +11,7 @@ export default {
                 ],
             },
         }
+
     },
 
     getters: {

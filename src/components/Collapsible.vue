@@ -2,7 +2,7 @@
     <div class="collapsible">		
 		<button @click="toggleDetails" class="collapsible__summary">{{ title }}</button>	 
 	</div>        
-     <slot v-if="!collapsed" />
+    <slot v-if="!collapsed" />
 </template>
 
 <script>
