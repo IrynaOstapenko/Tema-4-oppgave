@@ -7,7 +7,7 @@
         <Slideshow />        
     </Collapsible>
 
-    <Collapsible :title="'Contact Form'">
+    <Collapsible :title="'Contact Us'">
         <ContactForm />
     </Collapsible>
 
@@ -21,6 +21,7 @@
 </template>
 
 <script>
+    import Navigation from '../components/Navigation.vue';
     import ToDoList from '../components/ToDoList.vue';
     import Slideshow from '../components/Slideshow.vue';
     import ContactForm from '../components/ContactForm.vue';
@@ -30,14 +31,20 @@
 
 	export default {
 		components: {
+            Navigation,
             ToDoList,
             Slideshow,
             ContactForm,
             SortableTable,
             Quiz,
-			Collapsible
-		}
-    }        
+			Collapsible,
+			CollapsibleTitle
+		},
+
+        props:
+            [ 'componentTitles' ]
+        ,
+	};
 </script>
 
 
