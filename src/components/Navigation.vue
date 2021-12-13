@@ -1,12 +1,16 @@
 <template>
 	<nav>
 		<RouterLink class="navbar" :to="{ name: 'home' }">Home</RouterLink>
-		<RouterLink class="navbar" :to="{ name: 'component', params: { component_id: 'todolist' } }">{{ $store.state.getComponents }}</RouterLink>
+	</nav>
+	<!-- RouterLinks causes error on the website. Functionable until merge-conflict -->
+	<!-- <nav>
+		<RouterLink class="navbar" :to="{ name: 'home' }">Home</RouterLink>
+		<RouterLink class="navbar" :to="{ name: 'component', params: { component_id: 'todolist' } }">To-do List</RouterLink>
 		<RouterLink class="navbar" :to="{ name: 'component', params: { component_id: 'slideshow' } }">Slideshow</RouterLink >
 		<RouterLink class="navbar" :to="{ name: 'component', params: { component_id: 'contactform' } }">Contact Us</RouterLink >
 		<RouterLink class="navbar" :to="{ name: 'component', params: { component_id: 'sortabletable' } }">Sortable Table</RouterLink >
 		<RouterLink class="navbar" :to="{ name: 'component', params: { component_id: 'quiz' } }">Quiz</RouterLink >
-	</nav>
+	</nav> -->
 </template>
 
 <script>
