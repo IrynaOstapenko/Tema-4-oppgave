@@ -18,9 +18,5 @@ export default {
         getComponents(state) {
             return state.navigation.components;
         },
-        
-        getComponentsCount(state) {
-            return state.navigation.components.length;
-        }
     },
 }
