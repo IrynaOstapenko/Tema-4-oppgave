@@ -1,11 +1,11 @@
 <template>
     <!-- routes to each component or home for navbar -->
-    <Home v-if="$route.params.component_id == 'home'" />
-    <ToDoList v-if="$route.params.component_id == 'todolist'" />
-    <Slideshow v-if="$route.params.component_id == 'slideshow'" />
-    <ContactForm v-if="$route.params.component_id == 'contactform'" />
-    <SortableTable v-if="$route.params.component_id == 'sortabletable'" />
-    <Quiz v-if="$route.params.component_id == 'quiz'" />
+    <Home v-if="$route.params.component_id === 'home'" />
+    <ToDoList v-if="$route.params.component_id === 'todolist'" />
+    <Slideshow v-if="$route.params.component_id === 'slideshow'" />
+    <ContactForm v-if="$route.params.component_id === 'contactform'" />
+    <SortableTable v-if="$route.params.component_id === 'sortabletable'" />
+    <Quiz v-if="$route.params.component_id === 'quiz'" />
 </template>
 
 <script>

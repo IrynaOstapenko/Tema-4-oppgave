@@ -1,29 +1,23 @@
 <template>
 	<nav>
 		<RouterLink class="navbar" :to="{ name: 'home' }">Home</RouterLink>
+	</nav>
+	<!-- RouterLinks causes error on the website. Functionable until merge-conflict -->
+	<!-- <nav>
+		<RouterLink class="navbar" :to="{ name: 'home' }">Home</RouterLink>
 		<RouterLink class="navbar" :to="{ name: 'component', params: { component_id: 'todolist' } }">To-do List</RouterLink>
 		<RouterLink class="navbar" :to="{ name: 'component', params: { component_id: 'slideshow' } }">Slideshow</RouterLink >
 		<RouterLink class="navbar" :to="{ name: 'component', params: { component_id: 'contactform' } }">Contact Us</RouterLink >
 		<RouterLink class="navbar" :to="{ name: 'component', params: { component_id: 'sortabletable' } }">Sortable Table</RouterLink >
 		<RouterLink class="navbar" :to="{ name: 'component', params: { component_id: 'quiz' } }">Quiz</RouterLink >
-	</nav>
+	</nav> -->
 </template>
 
 <script>
-    import ToDoList from './ToDoList.vue';
-    import Slideshow from './Slideshow.vue';
-    import ContactForm from './ContactForm.vue';
-    import SortableTable from './SortableTable.vue';
-    import Quiz from './Quiz.vue'; 
-
 	export default {
 		computed: {
 			components() {
 				return this.$store.getters.getComponents;
-			},
-
-			pagesFromStore() {
-				return this.$store.getters.getPages
 			},
 		},
 	};
@@ -51,5 +45,10 @@
 		background: rgb(0, 0, 0);
 		color: white;
 		text-decoration: none;
+		transition-duration: 0.8s;
+	}
+
+	.navbar:hover {
+		letter-spacing: 3px;
 	}
 </style> 
