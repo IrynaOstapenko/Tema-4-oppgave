@@ -1,6 +1,6 @@
 <template>
     <div class="collapsible">		
-		<button @click="toggleDetails()" class="collapsible__summary">{{ title }}</button>	 
+		<button @click="toggleDetails" class="collapsible__summary">{{ title }}</button>	 
 	</div>        
     <slot v-if="!collapsed" />
 </template>
@@ -58,10 +58,6 @@
 		padding-top: 0;
 		background: rgb(202, 133, 133);
 		width: 50vw;
-	}
-
-	button {
-		text-decoration: none;
 	}
 
 	.collapsible__arrow {
