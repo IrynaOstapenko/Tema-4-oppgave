@@ -2,8 +2,9 @@ import { createApp } from 'vue';
 import { createStore } from 'vuex';
 import { createRouter, createWebHistory } from 'vue-router';
 
-import store from '../store.js'
+
 import App from './App.vue';
+import store from '../store.js'
 import routes from '../routes.js';
 
 const app_store = createStore(store);
