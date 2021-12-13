@@ -39,7 +39,7 @@
             SortableTable,
             Quiz,
 			Collapsible,
-			//CollapsibleTitle
+			CollapsibleTitle
 		},
 
         props:
