@@ -1,20 +1,14 @@
 <template>
     <div class="collapsible">		
-		<button @click="toggleDetails" class="collapsible__summary">{{ title }}</button>	 
+		<button @click="toggleDetails()" class="collapsible__summary">{{ title }}</button>	 
 	</div>        
     <slot v-if="!collapsed" />
 </template>
 
-<script>
-    import CollapsibleTitle from './CollapsibleTitle.vue';
-
+<script>   
     export default {
 		props: {
-			title: { type: String, default: 'No title' }
-		},
-
-		components: {
-			CollapsibleTitle
+			title: { type: String, default: 'No title' },
 		},
        
 		data() {
@@ -25,11 +19,10 @@
 
 		methods: {
 			toggleDetails() {
-				this.collapsed = !this.collapsed
-			},
-			
-		}
-	};
+				this.collapsed = !this.collapsed	
+			}
+		}		
+	}
 </script>
 
 <style>
@@ -65,6 +58,10 @@
 		padding-top: 0;
 		background: rgb(202, 133, 133);
 		width: 50vw;
+	}
+
+	button {
+		text-decoration: none;
 	}
 
 	.collapsible__arrow {

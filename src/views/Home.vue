@@ -1,10 +1,10 @@
 <template>
-    <Collapsible :title="'Todo List'">
-        <ToDoList />
-    </Collapsible>
-
-    <Collapsible :title="'Slideshow'">
-        <Slideshow />
+    <Collapsible :title="'Todo List'">           
+        <ToDoList />                    
+    </Collapsible>  
+    
+    <Collapsible :title="'Slideshow'">    
+        <Slideshow />        
     </Collapsible>
 
     <Collapsible :title="'Contact Us'">
@@ -28,7 +28,6 @@
     import SortableTable from '../components/SortableTable.vue';
     import Quiz from '../components/Quiz.vue';
 	import Collapsible from '../components/Collapsible.vue';
-	import CollapsibleTitle from '../components/CollapsibleTitle.vue';
 
 	export default {
 		components: {
@@ -48,6 +47,4 @@
 	};
 </script>
 
-<style>
-   
-</style>
+

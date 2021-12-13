@@ -1,5 +1,5 @@
 <template>
-	<div class="todo-container">
+	<div class="todo-container">        
 
     	<div class="add-task">
 			<!-- Input and button cannot be inside of the <form> because the app reloads and list becomes empty immediately after a task is added             -->
