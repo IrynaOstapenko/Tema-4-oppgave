@@ -53,8 +53,8 @@
    }
 
    .done-item__delete-button {
-       height: 15px;
-       width: 15px;
+       height: 20px;
+       width: 20px;
        margin-right: 7px;
        border: none;
        background-color: white;

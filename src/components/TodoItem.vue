@@ -63,11 +63,12 @@
        width: 20px;
        background-color: #ffff;
        border: none;
+       cursor: pointer;
    }
  
    .todo-item__delete-button {
-       height: 15px;
-       width: 15px;
+       height: 20px;
+       width: 20px;
        background-color: #ffff;
        border: none;
        border-radius: 2px;

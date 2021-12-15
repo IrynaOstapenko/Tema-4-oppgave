@@ -48,6 +48,7 @@
 		color: #fff;
 		font-family: 'Quicksand', sans-serif;
 		font-size: 1.2em;
+		cursor: pointer;
 	}
 
 	.collapsible__summary,

@@ -21,12 +21,12 @@
 		data() {
 			return {
                 slides: [
-                    '../assets/christmas_candies.jpg',
-                    '../assets/christmas_cocoa.jpg',
-                    '../assets/christmas_tree.jpg',
-                    '../assets/dogs_christmas.jpg',
-                    '../assets/stockings.jpg',
-                    '../assets/winter_street.jpg'
+                    '/images/christmas_candies.jpg',
+                    '/images/christmas_cocoa.jpg',
+                    '/images/christmas_tree.jpg',
+                    '/images/dogs_christmas.jpg',
+                    '/images/stockings.jpg',
+                    '/images/winter_street.jpg'
                 ],
                 visibleSlide: 0,
 			}
