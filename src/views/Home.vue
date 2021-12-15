@@ -28,7 +28,6 @@
     import SortableTable from '../components/SortableTable.vue';
     import Quiz from '../components/Quiz.vue';
 	import Collapsible from '../components/Collapsible.vue';
-    import CollapsibleTitle from '../components/CollapsibleTitle.vue';
 
 	export default {
 		components: {
@@ -38,14 +37,9 @@
             ContactForm,
             SortableTable,
             Quiz,
-			Collapsible,
-			CollapsibleTitle
-		},
-
-        props:
-            [ 'componentTitles' ]
-        ,
-	};
+			Collapsible
+		}
+    }
 </script>
 
 

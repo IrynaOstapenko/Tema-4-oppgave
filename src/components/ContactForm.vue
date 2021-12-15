@@ -16,16 +16,16 @@
 					name: null,
 					email: null,
 					message: null,
-				},
-			};
+				}
+			}
 		},
 
 		methods: {
 			submit_form() {
 				alert(`Thank you for contacting us, ${this.form.name}!`);
-			},
-		},
-	};
+			}
+		}
+	}
 </script>
 
 <style>

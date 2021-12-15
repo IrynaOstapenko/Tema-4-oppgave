@@ -59,5 +59,4 @@
        border: none;
        background-color: white;
    }
-
 </style>

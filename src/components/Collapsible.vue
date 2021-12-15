@@ -5,7 +5,8 @@
     <slot v-if="!collapsed" />
 </template>
 
-<script>   
+<script>  
+
     export default {
 		props: {
 			title: { type: String, default: 'No title' },
@@ -60,14 +61,4 @@
 		width: 50vw;
 	}
 
-	.collapsible__arrow {
-		width: 0.7em;
-		height: 1px;
-		padding-left: 15px;
-		margin-right: 0.5em;
-	}
-
-	.collapsible__arrow--rotated {
-		transform: rotate(90deg);
-	}
 </style>

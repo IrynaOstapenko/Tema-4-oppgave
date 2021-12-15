@@ -1,11 +1,16 @@
 # Tema-4-oppgave
 
-Liste av det vi må gjøre:
+In this project we have a collapsible menu that hides 5 applications: 
+- Todo List,
+- Slideshow,
+- Contact Form,
+- Sortable Table,
+- Quiz.
 
-1. Navigasjon.
-2. Bruke noe nytt i Tabell.
-3. Bruke global state i noen komponent. Alejandro sa ikke noe om det, men det står i krav.
-4. Formatering.
-5. BEM.
-6. Figma, elementene må ha samme navn som i BEM.
-7. Netlify.
+All these applications open in their own pages when chosen on the navbar.
+
+The project is made with the help of Vue.js.
+
+Router and Store have been applied.
+
+

@@ -4,7 +4,6 @@
 		<button class="todo-item__done-button" @click="emitDone">
 			<DoneIcon />
 		</button>
-		
 		<button class="todo-item__delete-button" @click="emitRemove">
 			<DeleteIcon />
 		</button>

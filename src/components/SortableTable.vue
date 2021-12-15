@@ -10,7 +10,7 @@
 
 		<tbody>
 			<tr class="sortable__tr" v-for="row in alphabeticalSort">
-				<td class="sortable__tr__td" v-for="value in row">{{ value }}</td>
+				<td class="sortable__td" v-for="value in row">{{ value }}</td>
 			</tr>
 		</tbody>
 	</table>
@@ -62,7 +62,6 @@
 						return 0
 					}
 				}
-
 				return this.content.sort((a, b) => compareFunction(a, b) * orderValue);
 			},
 		},
@@ -71,7 +70,7 @@
 				this.sort.key = key;
 				this.$router.push({ query: { ...this.$route.query, sort: this.sort.key } })
 			}
-		},
+		}
 	}
 </script>
 
@@ -100,12 +99,11 @@
 		height: 30px;
 		margin: auto;
 	}
-
+	
 	.sortable__tr:nth-child(even) {background-color: #f1eaea;}
 	tr:nth-child(even) {background-color: rgb(238, 232, 229);}
 
-	.sortable__tr__td {
+	.sortable__td {
 		padding: 0.4em;
 	}
-
 </style>

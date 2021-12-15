@@ -1,26 +1,16 @@
 <template>
 	<nav>
 		<RouterLink class="navbar" :to="{ name: 'home' }">Home</RouterLink>
-	</nav>
-	<!-- RouterLinks causes error on the website. Functionable until merge-conflict -->
-	<!-- <nav>
-		<RouterLink class="navbar" :to="{ name: 'home' }">Home</RouterLink>
 		<RouterLink class="navbar" :to="{ name: 'component', params: { component_id: 'todolist' } }">To-do List</RouterLink>
 		<RouterLink class="navbar" :to="{ name: 'component', params: { component_id: 'slideshow' } }">Slideshow</RouterLink >
 		<RouterLink class="navbar" :to="{ name: 'component', params: { component_id: 'contactform' } }">Contact Us</RouterLink >
 		<RouterLink class="navbar" :to="{ name: 'component', params: { component_id: 'sortabletable' } }">Sortable Table</RouterLink >
 		<RouterLink class="navbar" :to="{ name: 'component', params: { component_id: 'quiz' } }">Quiz</RouterLink >
-	</nav> -->
+	</nav>
 </template>
 
 <script>
-	export default {
-		computed: {
-			components() {
-				return this.$store.getters.getComponents;
-			},
-		},
-	};
+
 </script>
 
 <style> 
@@ -33,7 +23,8 @@
 		left: 0;
 		background: rgb(0, 0, 0);
 		width: 100%;
-		padding: 15px;
+		padding: 3px;
+		margin-bottom: 5px;
 	}
 
 	.navbar {
@@ -47,7 +38,7 @@
 		text-decoration: none;
 		transition-duration: 0.8s;
 	}
-
+	
 	.navbar:hover {
 		letter-spacing: 3px;
 	}

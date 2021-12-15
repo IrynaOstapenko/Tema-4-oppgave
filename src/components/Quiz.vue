@@ -1,33 +1,37 @@
 <template>    
     <div class="quiz-container">
+        <SetTimer />        
         <!-- We show the heading only on top of the first question -->
-        <h2 class="quiz-container__heading" v-show="questionsIndex === 0">TRY OUR QUIZ</h2>
-    
+        <h2 class="quiz-container__heading" v-show="questionsIndex === 0">TRY OUR QUIZ</h2>    
         <div class="quiz-container__question" v-for="(question, index) in questions" v-show="index === questionsIndex">            
-            <h4 class="quiz-container__question__heading">{{ question.text }}</h4>
-            <ul class="quiz-container__question__answers">
+            <h4 class="question__heading">{{ question.text }}</h4>
+            <ul class="question__answers">
                 <li v-for="answer in question.answers">
                     <input  type="radio" :id="answer.text" :name="index" :value="answer.correct" v-model="userAnswer">
-        <!-- We use v-model to connect user's choice with vue. In radio buttons v-model links to value. -->
+                    <!-- We use v-model to connect user's choice with vue. In radio buttons v-model links to value. -->
                     <label v-bind:for="answer.text">{{ answer.text }}</label>
                 </li>
             </ul>
 
-            <button class="quiz-container__question__btn btn-prev" v-if="questionsIndex > 0" @click="prev">prev</button>
-
-            <button class="quiz-container__question__btn btn-next" @click="next">next</button>
+            <button class="question__button" v-if="questionsIndex > 0" @click="prev">prev</button>
+            <button class="question__button" @click="next">next</button>
         </div>
 
-        <div class="quiz-container__result" v-show="questionsIndex === questions.length">
-            <h2 class="quiz-container__result__heading">Quiz finished!</h2>
+        <div class="quiz-result" v-show="questionsIndex === questions.length">
+            <h2 class="quiz-result__heading">Quiz finished!</h2>
             <p>You scored {{ score() }} / {{ questions.length }}</p>
         </div>
-
     </div>  
 </template>
 
 <script>
+import SetTimer from './SetTimer.vue';
+
 export default {
+    components: {
+        SetTimer
+    },
+    
     data() {
         return {
             questions: [
@@ -118,6 +122,12 @@ export default {
         font-family: 'Quicksand', sans-serif;
         margin-bottom: 5vh;
     }
+
+    .store-test-button {
+        height: 2em;
+        width: 5em;
+    }
+
     .quiz-container__heading {
         text-align: center;
         margin: 0.8em;
@@ -125,35 +135,42 @@ export default {
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
     }
+
     .quiz-container__question {
        position: absolute;
        top: 25%;
        left: 30%;
     }
-    .quiz-container__question__heading {
+
+    .question__heading {
         margin-bottom: 0.3em;
     }
-    .quiz-container__question__answers {
+
+    .question__answers {
         list-style-type: none;
         font-size: 0.8em;
         margin-bottom: 0.3em;
         padding: 5px;
         width: 17vw;
     }
-    .quiz-container__question__answers li {
+
+    .question__answers li {
         background: rgb(238, 229, 224);
         border: 0.3em outset rgb(214, 198, 188);
         margin: 0.3em;
         padding: 6px;
     }
+
     label {
         margin-left: 0.2em;
     }
-    .quiz-container__question__answers li:hover {
+
+    .question__answers li:hover {
         background: rgb(228, 213, 204);
         border: 0.3em outset rgb(230, 216, 207);
     }
-    .quiz-container__question__btn {
+
+    .question__button {
         margin-bottom: 0.3em;
         background-color: white;
         height: 25px;
@@ -162,16 +179,18 @@ export default {
         border-radius: 25px;
         margin-right: 0.2em;
     }
-    
-    .quiz-container__result__heading {
+
+    .quiz-result__heading {
         text-align: center;
         margin: 0.8em;
         color: #db6541;
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
     } 
-    .quiz-container__result p {
+
+    .quiz-result p {
         text-align: center;
         padding: 60px;
     }
+
 </style>

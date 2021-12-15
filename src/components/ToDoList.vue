@@ -1,6 +1,5 @@
 <template>
 	<div class="todo-container">        
-
     	<div class="add-task">
 			<!-- Input and button cannot be inside of the <form> because the app reloads and list becomes empty immediately after a task is added             -->
             <input class="add-task__input" type="text" placeholder="Add task" v-model="addedTask" @keyup.enter="addTask()">
@@ -9,19 +8,16 @@
         </div>
 
         <h3 class="header-to-do">To do:</h3>
-
         <ul class="list-of-tasks">
             <!-- Used props to separate list of tasks -->
             <TodoItem @move-to-done="moveToDone(index)" @remove-task="removeTask(index)" v-for="(task, index) in tasks"  :task="task" />
         </ul>
 
         <h3 class="header-done">Done:</h3>
-
         <ul class="list-of-done">
             <!-- Used props to separate list of done tasks -->
             <DoneItem @remove-from-done="removeFromDone(index)" v-for="(doneTask, index) in doneTasks" :doneTask="doneTask" />
         </ul>
-
     </div>
 </template>
  

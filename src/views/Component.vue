@@ -26,8 +26,8 @@
             ContactForm,
             SortableTable,
             Quiz
-		},
-	};
+		}
+	}
 </script>
 
 <style>
